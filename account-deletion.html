@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계정 삭제 안내 - Dr. Mind</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #6B46C1, #9333EA);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: #6B46C1;
+            font-size: 1.8em;
+            margin: 30px 0 15px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            color: #718096;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .warning-box {
+            background: #fef5e7;
+            border-left: 4px solid #f39c12;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box strong {
+            color: #e67e22;
+        }
+
+        .steps {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            background: #6B46C1;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .data-section {
+            background: #ebf8ff;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .data-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .data-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .data-list li:before {
+            content: "✓";
+            color: #48bb78;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .info-box {
+            background: #e6fffa;
+            border-left: 4px solid #38b2ac;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            text-align: center;
+            color: #718096;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #6B46C1, #9333EA);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🧠</div>
+            <h1>계정 삭제 안내</h1>
+            <p class="subtitle">Dr. Mind 앱 계정 및 데이터 삭제 방법</p>
+        </div>
+
+        <div class="warning-box">
+            <strong>⚠️ 주의사항</strong>
+            <p>계정을 삭제하면 모든 상담 내역과 개인 정보가 영구적으로 삭제되며, 복구할 수 없습니다.</p>
+        </div>
+
+        <h2>📱 계정 삭제 방법</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <strong>Dr. Mind 앱 실행</strong>
+                    <p>모바일 기기에서 Dr. Mind 앱을 실행합니다.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <strong>프로필 탭으로 이동</strong>
+                    <p>하단 네비게이션 바에서 프로필(마이페이지) 탭을 선택합니다.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <strong>회원 탈퇴 버튼 클릭</strong>
+                    <p>프로필 화면 하단에 있는 '회원 탈퇴' 버튼을 클릭합니다.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <strong>탈퇴 확인</strong>
+                    <p>계정 삭제 확인 대화상자에서 '확인'을 선택하여 계정 삭제를 완료합니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>🗂️ 삭제되는 데이터</h2>
+        <div class="data-section">
+            <p><strong>계정 삭제 시 다음 데이터가 즉시 영구 삭제됩니다:</strong></p>
+            <ul class="data-list">
+                <li>회원 정보 (이메일, 닉네임, 프로필 이미지)</li>
+                <li>OAuth 인증 정보 (Google, Kakao 연동 정보)</li>
+                <li>모든 상담 세션 및 대화 내역</li>
+                <li>상담사 평가 및 리뷰 기록</li>
+                <li>즐겨찾기 설정</li>
+                <li>앱 사용 설정 및 개인화 정보</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <strong>ℹ️ 추가 정보</strong>
+            <ul style="list-style: none; padding-left: 0;">
+                <li>• 계정 삭제는 즉시 처리되며 취소할 수 없습니다</li>
+                <li>• 삭제 후 동일한 이메일로 재가입이 가능합니다</li>
+                <li>• 결제 내역이 있는 경우 환불 정책에 따라 처리됩니다</li>
+                <li>• 법적 의무 보관 데이터는 관련 법령에 따라 일정 기간 보관 후 삭제됩니다</li>
+            </ul>
+        </div>
+
+        <h2>📧 문의사항</h2>
+        <p>계정 삭제와 관련하여 문의사항이 있으시면 아래 연락처로 문의해 주세요:</p>
+        <ul style="list-style: none; padding: 15px 0;">
+            <li>📧 이메일: qortkdgus95@gmail.com</li>
+            <li>📱 앱 내 고객센터: 프로필 > 고객지원</li>
+        </ul>
+
+        <div class="footer">
+            <a href="index.html" class="back-link">메인으로 돌아가기</a>
+            <p style="margin-top: 20px;">© 2025 Dr. Mind - AI 철학 상담 서비스</p>
+            <p>최종 업데이트: 2025년 9월</p>
+        </div>
+    </div>
+</body>
+</html>
