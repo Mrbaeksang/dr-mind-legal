@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>계정 삭제 안내 - Dr. Mind</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마인드톡 - 계정 및 데이터 삭제 안내</title>
     <style>
         * {
             margin: 0;
@@ -12,80 +12,69 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 20px;
+            background: linear-gradient(135deg, #7f5af0 0%, #2cb1bc 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif;
+            color: #1f2937;
+            padding: 28px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 780px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(6px);
+            border-radius: 20px;
+            padding: 48px 40px;
+            box-shadow: 0 24px 48px rgba(15, 23, 42, 0.18);
         }
 
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 36px;
         }
 
         .logo {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #6B46C1, #9333EA);
-            border-radius: 20px;
-            margin: 0 auto 20px;
+            width: 84px;
+            height: 84px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #6d28d9, #7c3aed);
+            color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 32px;
-            font-weight: bold;
+            font-size: 34px;
+            margin: 0 auto 18px;
         }
 
         h1 {
-            color: #2d3748;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 2.2rem;
             font-weight: 700;
-        }
-
-        h2 {
-            color: #6B46C1;
-            font-size: 1.8em;
-            margin: 30px 0 15px;
-            font-weight: 600;
+            color: #1f2937;
         }
 
         .subtitle {
-            color: #718096;
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            text-align: center;
+            margin-top: 10px;
+            font-size: 1.05rem;
+            color: #4b5563;
         }
 
-        .warning-box {
-            background: #fef5e7;
-            border-left: 4px solid #f39c12;
+        .warning {
+            background: #fff7ed;
+            border-left: 4px solid #f97316;
             padding: 20px;
-            margin: 30px 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .warning-box strong {
-            color: #e67e22;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 32px;
         }
 
         .steps {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 30px 0;
+            background: #f9fafb;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin: 28px 0;
         }
 
         .step {
@@ -95,179 +84,175 @@
         }
 
         .step-number {
-            background: #6B46C1;
-            color: white;
-            width: 30px;
-            height: 30px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
+            background: #6366f1;
+            color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            margin-right: 15px;
+            font-weight: 600;
+            margin-right: 16px;
             flex-shrink: 0;
         }
 
-        .step-content {
-            flex: 1;
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #4c1d95;
         }
 
-        .data-section {
-            background: #ebf8ff;
-            border-radius: 12px;
-            padding: 25px;
+        h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #1f2937;
+        }
+
+        p, li {
+            margin-bottom: 10px;
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        .data-box {
+            background: #eef2ff;
+            border-radius: 14px;
+            padding: 24px;
             margin: 30px 0;
-        }
-
-        .data-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .data-list li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .data-list li:before {
-            content: "✓";
-            color: #48bb78;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
         }
 
         .info-box {
-            background: #e6fffa;
-            border-left: 4px solid #38b2ac;
-            padding: 20px;
+            background: #ecfeff;
+            border-radius: 14px;
+            padding: 24px;
             margin: 30px 0;
-            border-radius: 0 8px 8px 0;
         }
 
         .footer {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid #e2e8f0;
+            margin-top: 44px;
             text-align: center;
-            color: #718096;
+            color: #64748b;
+            font-size: 0.95rem;
         }
 
         .back-link {
             display: inline-block;
-            margin-top: 30px;
-            padding: 12px 30px;
-            background: linear-gradient(135deg, #6B46C1, #9333EA);
-            color: white;
+            margin-top: 24px;
+            padding: 12px 26px;
+            border-radius: 32px;
+            background: linear-gradient(135deg, #6d28d9, #7c3aed);
+            color: #fff;
             text-decoration: none;
-            border-radius: 8px;
             font-weight: 600;
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease;
         }
 
         .back-link:hover {
             transform: translateY(-2px);
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 640px) {
             .container {
-                padding: 30px 20px;
+                padding: 36px 24px;
             }
-            
-            h1 {
-                font-size: 2em;
+
+            .step {
+                flex-direction: column;
             }
-            
-            h2 {
-                font-size: 1.5em;
+
+            .step-number {
+                margin-bottom: 12px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">🧠</div>
-            <h1>계정 삭제 안내</h1>
-            <p class="subtitle">Dr. Mind 앱 계정 및 데이터 삭제 방법</p>
-        </div>
+    <main class="container">
+        <header class="header">
+            <div class="logo">톡</div>
+            <h1>계정 및 데이터 삭제 안내</h1>
+            <p class="subtitle">마인드톡 앱에서 계정을 삭제하면 즉시 모든 개인화 데이터가 삭제됩니다.</p>
+        </header>
 
-        <div class="warning-box">
-            <strong>⚠️ 주의사항</strong>
-            <p>계정을 삭제하면 모든 상담 내역과 개인 정보가 영구적으로 삭제되며, 복구할 수 없습니다.</p>
-        </div>
+        <section class="warning">
+            <strong>⚠️ 중요한 안내</strong>
+            <p>계정을 삭제하면 AI 대화 기록, 즐겨찾기, 평가 등 모든 데이터가 복구 불가능한 방식으로 삭제됩니다. 삭제 후 같은 이메일로 재가입할 수는 있으나 기존 데이터는 복원되지 않습니다.</p>
+        </section>
 
-        <h2>📱 계정 삭제 방법</h2>
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <strong>Dr. Mind 앱 실행</strong>
-                    <p>모바일 기기에서 Dr. Mind 앱을 실행합니다.</p>
+        <section>
+            <h2>계정 삭제 방법</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>마인드톡 앱 실행</h3>
+                        <p>모바일 기기에서 최신 버전의 마인드톡 앱을 실행합니다.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>프로필 &gt; 계정 관리 이동</h3>
+                        <p>하단 탭에서 프로필(마이페이지)을 선택한 뒤 “계정 관리” 메뉴를 열어 주세요.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>회원 탈퇴 선택</h3>
+                        <p>“회원 탈퇴” 버튼을 누르면 삭제 전 확인 안내가 표시됩니다.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h3>삭제 완료</h3>
+                        <p>안내 문구를 읽고 동의하면 계정과 데이터가 즉시 삭제되며, 앱에서 자동으로 로그아웃됩니다.</p>
+                    </div>
                 </div>
             </div>
-            
-            <div class="step">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <strong>프로필 탭으로 이동</strong>
-                    <p>하단 네비게이션 바에서 프로필(마이페이지) 탭을 선택합니다.</p>
-                </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <strong>회원 탈퇴 버튼 클릭</strong>
-                    <p>프로필 화면 하단에 있는 '회원 탈퇴' 버튼을 클릭합니다.</p>
-                </div>
-            </div>
-            
-            <div class="step">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                    <strong>탈퇴 확인</strong>
-                    <p>계정 삭제 확인 대화상자에서 '확인'을 선택하여 계정 삭제를 완료합니다.</p>
-                </div>
-            </div>
-        </div>
+        </section>
 
-        <h2>🗂️ 삭제되는 데이터</h2>
-        <div class="data-section">
-            <p><strong>계정 삭제 시 다음 데이터가 즉시 영구 삭제됩니다:</strong></p>
-            <ul class="data-list">
-                <li>회원 정보 (이메일, 닉네임, 프로필 이미지)</li>
-                <li>OAuth 인증 정보 (Google, Kakao 연동 정보)</li>
-                <li>모든 상담 세션 및 대화 내역</li>
-                <li>상담사 평가 및 리뷰 기록</li>
-                <li>즐겨찾기 설정</li>
-                <li>앱 사용 설정 및 개인화 정보</li>
+        <section class="data-box">
+            <h2>삭제되는 데이터</h2>
+            <ul>
+                <li>계정 프로필 정보(이메일, 닉네임, 프로필 이미지)</li>
+                <li>AI 대화 세션 및 메시지 기록</li>
+                <li>즐겨찾기 캐릭터, 평가 및 신고 기록</li>
+                <li>앱 내 설정 및 개인화 정보</li>
             </ul>
-        </div>
+            <p>다만, 법령에서 일정 기간 보관이 요구되는 정보는 해당 기간 동안 별도로 보관한 후 파기됩니다.</p>
+        </section>
 
-        <div class="info-box">
-            <strong>ℹ️ 추가 정보</strong>
-            <ul style="list-style: none; padding-left: 0;">
-                <li>• 계정 삭제는 즉시 처리되며 취소할 수 없습니다</li>
-                <li>• 삭제 후 동일한 이메일로 재가입이 가능합니다</li>
-                <li>• 결제 내역이 있는 경우 환불 정책에 따라 처리됩니다</li>
-                <li>• 법적 의무 보관 데이터는 관련 법령에 따라 일정 기간 보관 후 삭제됩니다</li>
+        <section class="info-box">
+            <h2>추가 안내</h2>
+            <ul>
+                <li>계정 삭제는 취소할 수 없으므로 신중히 진행해 주세요.</li>
+                <li>삭제 후 동일한 로그인 수단으로 재가입 시 새 계정으로 이용하게 됩니다.</li>
+                <li>현재 마인드톡은 유료 결제 기능을 제공하지 않으므로 결제 내역은 존재하지 않습니다.</li>
             </ul>
-        </div>
+        </section>
 
-        <h2>📧 문의사항</h2>
-        <p>계정 삭제와 관련하여 문의사항이 있으시면 아래 연락처로 문의해 주세요:</p>
-        <ul style="list-style: none; padding: 15px 0;">
-            <li>📧 이메일: qortkdgus95@gmail.com</li>
-            <li>📱 앱 내 고객센터: 프로필 > 고객지원</li>
-        </ul>
+        <section>
+            <h2>문의처</h2>
+            <p>계정 삭제가 원활하지 않거나 도움이 필요하시면 아래로 연락해 주세요.</p>
+            <ul>
+                <li>이메일: qortkdgus95@gmail.com</li>
+                <li>앱 내 고객 지원: 프로필 &gt; 고객지원</li>
+            </ul>
+        </section>
 
-        <div class="footer">
-            <a href="index.html" class="back-link">메인으로 돌아가기</a>
-            <p style="margin-top: 20px;">© 2025 Dr. Mind - AI 철학 상담 서비스</p>
+        <footer class="footer">
+            <a href="index.html" class="back-link">법적 안내 홈으로 돌아가기</a>
+            <p style="margin-top: 16px;">© 2025 마인드톡(MindTalk) | AI 엔터테인먼트 대화 서비스</p>
             <p>최종 업데이트: 2025년 9월</p>
-        </div>
-    </div>
+        </footer>
+    </main>
 </body>
 </html>
